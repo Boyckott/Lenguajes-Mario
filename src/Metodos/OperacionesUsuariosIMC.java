@@ -13,6 +13,6 @@ public class OperacionesUsuariosIMC {
     
     public String calcularIMC(UsuarioIMC a){
        
-    return""+Imc;
+    return"";
     } 
 }
