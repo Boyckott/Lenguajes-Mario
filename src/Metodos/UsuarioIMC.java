@@ -10,22 +10,24 @@ package Metodos;
  * @author mario
  */
 public class UsuarioIMC {
-private int peso;
-private String estatura;
+private float peso;
+private float estatura;
 
-    public String getEstatura() {
+    
+
+    public float getEstatura() {
         return estatura;
     }
 
-    public void setEstatura(String estatura) {
+    public void setEstatura(float estatura) {
         this.estatura = estatura;
     }
 
-    public int getPeso() {
+    public float getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(float peso) {
         this.peso = peso;
     }
 
