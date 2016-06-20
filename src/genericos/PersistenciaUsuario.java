@@ -40,7 +40,15 @@ public class PersistenciaUsuario {
         //Ahora si a guardar el objeto 
         usuarios.add(u);
             oos.writeObject(usuarios);
-            
-        
+            }
+    
+    //Empieza el metodo de leer los usuarios guardados 
+    
+    public ArrayList<Usuario> buscarTodos()throws Exception{
+        File f=new File("archivaldo.raton");
+        FileInputStream fis=new FileInputStream(f);
+        ObjectInputStream ois=new ObjectInputStream(fis);
+        usuarios=(ArrayList<Usuario>) ois.readObject();
+        return usuarios;
     }
 }

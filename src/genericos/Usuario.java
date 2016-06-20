@@ -40,6 +40,12 @@ public class Usuario implements Serializable{
     public Usuario() {
     }
 
+    public Usuario(String nombre, Integer edad, String email) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.email = email;
+    }
+
     /**
      * @return the nombre
      */
