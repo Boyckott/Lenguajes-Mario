@@ -5,6 +5,8 @@
  */
 package genericos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author T-107
@@ -12,16 +14,18 @@ package genericos;
 public class ProbarUsuarios {
     public static void main(String[] args) {
         
-        //Paso 1 Crear usuario
-        Usuario u=new Usuario("Juan",20,"juan@gmail.com");
-        
-        //Paso 2 Guardar este usuario 
-        PersistenciaUsuario p=new PersistenciaUsuario();
-        try {
-            p.guardar(u);
-            System.out.println("Usuario Guardado");
-        }catch(Exception ex){
+    //Vamos a leer el arraylist a ver que hay 
+    //paso 1 Ctreamos un objeto de la clase PersistenciaUsuario
+    
+    PersistenciaUsuario p=new PersistenciaUsuario();
+    try{
+        ArrayList<Usuario> usuarios= p.buscarTodos();
+        int tam = usuarios.size();
+        System.out.println("Usuarios Guardados: "+tam);
+        System.out.println(usuarios.get(0).getNombre());
+        }catch  (Exception ex){
             System.out.println(ex.getMessage());
         }
+    
     }
-}
+    }

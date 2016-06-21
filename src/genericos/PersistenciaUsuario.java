@@ -30,7 +30,8 @@ public class PersistenciaUsuario {
         //Paso 1 generar el archivo a guardarse
         
        File f=new File("archivaldo.raton");
-       //INdicar que se va a guardar 
+       if(f.exists()) usuarios=buscarTodos();
+       //Indicar que se va a guardar 
        FileOutputStream fos=new FileOutputStream(f);
        
        //Generar el objetoto que nos va a ayudar a guardar el ArrayList de USuarios 
@@ -46,6 +47,8 @@ public class PersistenciaUsuario {
     
     public ArrayList<Usuario> buscarTodos()throws Exception{
         File f=new File("archivaldo.raton");
+        
+            //Indicar que se va a guardar
         FileInputStream fis=new FileInputStream(f);
         ObjectInputStream ois=new ObjectInputStream(fis);
         usuarios=(ArrayList<Usuario>) ois.readObject();

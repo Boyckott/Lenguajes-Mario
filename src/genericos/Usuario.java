@@ -31,7 +31,8 @@ public class Usuario implements Serializable{
     private String nombre;
     private Integer edad;
     private String email;
-
+    
+    
     @Override
     public String toString() {
         return "Usuario{" + "nombre=" + nombre + ", edad=" + edad + ", email=" + email + '}';
