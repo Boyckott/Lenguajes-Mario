@@ -113,11 +113,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
         tablaUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Nombre", "Edad", "E-mail"
